@@ -33,11 +33,9 @@ function setup() {
 	packageBody = Bodies.circle(width/2 , 100 , 25 , {restitution:0.4, isStatic:true});
 	World.add(world, packageBody);
 
-	//Create object boxLeftBody from Box class. 
-
- 	//Create object boxRightBody from Box class. 
-
- 	//Create object boxBottomBody from Box class. 
+	boxBottomBody = new Box(400, 610, 200,20);
+ 	boxLeftBody = new Box(310, 570, 20,100);
+ 	boxRightBody = new Box(490, 570, 20,100);
 
 }
 
@@ -48,10 +46,10 @@ function draw() {
 	
 	packageSprite.x= packageBody.position.x 
 	packageSprite.y= packageBody.position.y 
-	
-	// display boxLeftBody
-	// display boxRightBody
-  	// display boxBottomBody
+
+	boxRightBody.display();
+	boxLeftBody.display();
+	boxBottomBody.display();
 
 	drawSprites(); 
 }
